@@ -1,0 +1,18 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "public/index.php",
+            "use": "@php-runtime/vercel-php",
+            "config": {
+                "phpVersion": "8.4.7" // Asegúrate de poner la versión de PHP que usa tu proyecto Symfony
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "public/index.php"
+        }
+    ]
+}
